@@ -35,6 +35,8 @@ namespace ZzukBot.ExtensionMethods
         public static void Log(this string value, string file, bool showDate = true)
         {
             var input = (showDate ? "[" + DateTime.Now + "] " : "") + value + Environment.NewLine;
+            if (!Directory.Exists(Paths.Logs))
+                Directory.CreateDirectory(Paths.Logs);
             File.AppendAllText(Paths.Logs + "\\" + file, input);
             var visualLog = $"[{file}] {"[" + DateTime.Now.ToString("t") + "] " + value}".Trim();
             new Action(() => SharedViewModel.Instance.DebugLog.Add(visualLog)).BeginDispatch(DispatcherPriority.Normal);
