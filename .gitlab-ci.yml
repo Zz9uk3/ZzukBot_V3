@@ -1,0 +1,19 @@
+stages:
+  - build
+  - postbuild
+
+job:
+  stage: build
+  script:
+  - echo "Restoring NuGet Packages..."
+  - '"c:\nuget.exe" restore "ZzukBot.sln"'  
+  - echo "Release build..."
+  - '"C:\Program Files (x86)\MSBuild\14.0\bin\msbuild.exe" /consoleloggerparameters:Summary /maxcpucount /nologo /property:Configuration=Release;Platform="Mixed Platforms" /verbosity:normal "ZzukBot.sln"'  
+  - echo "Deleting build files..."
+  - cd ..
+  - rmdir "zzukbot" /S /Q
+  - echo "Above error can be ignored. It can't delete the folder for some reason, but it does delete the files. :)
+  - rmdir "zzukbot.tmp" /S /Q  
+  tags: 
+  except:
+  - tags  

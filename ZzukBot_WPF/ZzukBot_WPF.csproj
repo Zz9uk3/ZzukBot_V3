@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{688F43E5-4881-47C9-A16D-2827AF38E2EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZzukBot</RootNamespace>
+    <AssemblyName>ZzukBot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\Internal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\Release\Internal\ZzukBot.xml</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\Internal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\Release\Internal\ZzukBot.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasm.NET, Version=1.0.5697.28632, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Fasm.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentBehaviourTree, Version=0.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentBehaviourTree.0.0.4.0\lib\net35\FluentBehaviourTree.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoreLinq, Version=2.0.20029.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.2.2.0\lib\net35\MoreLinq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX, Version=3.1.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.3.1.1\lib\net45\SharpDX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=3.1.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D9.3.1.1\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=3.1.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.3.1.1\lib\net45\SharpDX.Mathematics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Authentication\AuthClient\AuthClientHandler.cs" />
+    <Compile Include="Authentication\AuthClient\AuthProcessor.cs" />
+    <Compile Include="Authentication\AuthClient\SendOvers.cs" />
+    <Compile Include="Authentication\Models\PacketModel.cs" />
+    <Compile Include="Constants\Other.cs" />
+    <Compile Include="ExtensionFramework\Classes\CustomClass.cs" />
+    <Compile Include="ExtensionFramework\CustomClasses.cs" />
+    <Compile Include="ExtensionFramework\DependencyLoader.cs" />
+    <Compile Include="ExtensionMethods\EnumExtensions.cs" />
+    <Compile Include="ExtensionMethods\LocationExtensions.cs" />
+    <Compile Include="ExtensionMethods\MemExtensions.cs" />
+    <Compile Include="ExtensionMethods\SecureStringExtensions.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs" />
+    <Compile Include="Game\Statics\Skills.cs" />
+    <Compile Include="Game\Transport\Transport.cs" />
+    <Compile Include="Helpers\Shared.cs" />
+    <Compile Include="Magikarp.cs" />
+    <Compile Include="ObfuscationSettings.cs" />
+    <Compile Include="Objects\Rectangle.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Settings\LogFiles.cs" />
+    <Compile Include="Settings\OptionManager.cs" />
+    <Compile Include="Settings\Options.cs" />
+    <Compile Include="Settings\Paths.cs" />
+    <Compile Include="UI\MainWindow\MainViewModel.cs" />
+    <Compile Include="UI\MainWindow\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SharedViewModel.cs" />
+    <Compile Include="WPF\AttachedProperties\ListBoxBehavior.cs" />
+    <Compile Include="WPF\AttachedProperties\Result.cs" />
+    <Compile Include="WPF\AttachedProperties\Secure.cs" />
+    <Compile Include="WPF\Commands\CommandWithoutParameter.cs" />
+    <Compile Include="WPF\Commands\CommandWithParameter.cs" />
+    <Compile Include="WPF\Commands\CommandHandler.cs" />
+    <Compile Include="WPF\Commands\Interfaces\ICommandAction.cs" />
+    <Compile Include="WPF\Converters\BoolInverterConverter.cs" />
+    <Compile Include="WPF\Converters\ChannelConverter.cs" />
+    <Compile Include="WPF\Converters\CopperConverter.cs" />
+    <Compile Include="WPF\Converters\TabSizeConverter.cs" />
+    <Compile Include="WPF\Converters\WidthAdjustConverter.cs" />
+    <Compile Include="WPF\ViewModel.cs" />
+    <Compile Include="WPF\WpfApplication.cs" />
+    <Compile Include="WPF\WpfExtensions.cs" />
+    <Page Include="UI\LoginWindow\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants\Enums.cs" />
+    <Compile Include="Constants\GameConstants.cs" />
+    <Compile Include="Constants\Offsets.cs" />
+    <Compile Include="Constants\PrivateEnums.cs" />
+    <Compile Include="Constants\Structs.cs" />
+    <Compile Include="Constants\WinImports.cs" />
+    <Compile Include="ExtensionFramework\BotBases.cs" />
+    <Compile Include="ExtensionFramework\Interfaces\IBotBase.cs" />
+    <Compile Include="ExtensionFramework\Interfaces\IPlugin.cs" />
+    <Compile Include="ExtensionFramework\Plugins.cs" />
+    <Compile Include="Game\Frames\FrameObjects\GossipOption.cs" />
+    <Compile Include="Game\Frames\FrameObjects\LootItem.cs" />
+    <Compile Include="Game\Frames\FrameObjects\MerchantItem.cs" />
+    <Compile Include="Game\Frames\FrameObjects\QuestChoiceReward.cs" />
+    <Compile Include="Game\Frames\FrameObjects\QuestLogEntry.cs" />
+    <Compile Include="Game\Frames\FrameObjects\QuestObjective.cs" />
+    <Compile Include="Game\Frames\FrameObjects\QuestOption.cs" />
+    <Compile Include="Game\Frames\FrameObjects\TaxiNode.cs" />
+    <Compile Include="Game\Frames\FrameObjects\TrainerSpellItem.cs" />
+    <Compile Include="Game\Frames\GossipFrame.cs" />
+    <Compile Include="Game\Frames\LootFrame.cs" />
+    <Compile Include="Game\Frames\MerchantFrame.cs" />
+    <Compile Include="Game\Frames\QuestFrame.cs" />
+    <Compile Include="Game\Frames\QuestGreetingFrame.cs" />
+    <Compile Include="Game\Frames\TaxiFrame.cs" />
+    <Compile Include="Game\Frames\TrainerFrame.cs" />
+    <Compile Include="Game\Statistics.cs" />
+    <Compile Include="Game\Statics\Hacks.cs" />
+    <Compile Include="Game\Statics\Inventory.cs" />
+    <Compile Include="Game\Statics\KeySender.cs" />
+    <Compile Include="Game\Statics\Login.cs" />
+    <Compile Include="Game\Statics\Lua.cs" />
+    <Compile Include="Game\Statics\Navigation.cs" />
+    <Compile Include="Game\Statics\ObjectManager.cs" />
+    <Compile Include="Game\Statics\QuestLog.cs" />
+    <Compile Include="Game\Statics\Spell.cs" />
+    <Compile Include="Game\Statics\UnitInfo.cs" />
+    <Compile Include="Game\Statics\WoWEventHandler.cs" />
+    <Compile Include="Helpers\DebugAssist.cs" />
+    <Compile Include="ExtensionMethods\AssemblyExtensions.cs" />
+    <Compile Include="Helpers\GreyMagic\AllocatedMemory.cs" />
+    <Compile Include="Helpers\GreyMagic\ExternalProcessReader.cs" />
+    <Compile Include="Helpers\GreyMagic\InProcessMemoryReader.cs" />
+    <Compile Include="Helpers\GreyMagic\Internals\DetourManager.cs" />
+    <Compile Include="Helpers\GreyMagic\Internals\Manager.cs" />
+    <Compile Include="Helpers\GreyMagic\Internals\PatchManager.cs" />
+    <Compile Include="Helpers\GreyMagic\MarshalCache.cs" />
+    <Compile Include="Helpers\GreyMagic\MemoryBase.cs" />
+    <Compile Include="Helpers\GreyMagic\MemoryProtectionOperation.cs" />
+    <Compile Include="Helpers\GreyMagic\MissingAttributeException.cs" />
+    <Compile Include="Helpers\GreyMagic\Native\Imports.cs" />
+    <Compile Include="Helpers\GreyMagic\Native\PeHeaderParser.cs" />
+    <Compile Include="Helpers\GreyMagic\SafeMemoryHandle.cs" />
+    <Compile Include="Helpers\GreyMagic\Utilities.cs" />
+    <Compile Include="Helpers\Wait.cs" />
+    <Compile Include="Injector\Launch.cs" />
+    <Compile Include="UI\LoginWindow\LoginViewModel.cs" />
+    <Compile Include="UI\LoginWindow\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UI\MainWindow\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\Dictionaries\Commands.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\Dictionaries\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WPF\Dictionaries\LayoutResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mem\AntiWarden\HookModule32.cs" />
+    <Compile Include="Mem\AntiWarden\HookWardenMemScan.cs" />
+    <Compile Include="Game\Statics\DirectX.cs" />
+    <Compile Include="Mem\Functions.cs" />
+    <Compile Include="Mem\GetEndScene.cs" />
+    <Compile Include="Mem\Hacks.cs" />
+    <Compile Include="Mem\Hooks\CacheCallbacks.cs" />
+    <Compile Include="Mem\Hooks\SignalEventHook.cs" />
+    <Compile Include="Mem\Hooks\SignalEvent_0Hook.cs" />
+    <Compile Include="Mem\Hooks\UnloadWorldHook.cs" />
+    <Compile Include="Mem\Libs.cs" />
+    <Compile Include="Mem\LoginBlock.cs" />
+    <Compile Include="Mem\MainThread.cs" />
+    <Compile Include="Mem\Memory.cs" />
+    <Compile Include="Objects\LocalPet.cs" />
+    <Compile Include="Objects\LocalPlayer.cs" />
+    <Compile Include="Objects\Location.cs" />
+    <Compile Include="Objects\WoWGameObject.cs" />
+    <Compile Include="Objects\WoWItem.cs" />
+    <Compile Include="Objects\WoWObject.cs" />
+    <Compile Include="Objects\WoWUnit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Resources\038.mmap" />
+    <None Include="Resources\beep" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fasm.NET.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FastCall.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loader.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="zb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WPF\Controls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if defined EAZFUSCATOR_NET_HOME (if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 5.5) else (echo Eazfuscator.NET obfuscator is not installed on this machine. Obfuscation will be skipped.)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

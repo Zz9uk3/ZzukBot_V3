@@ -1,0 +1,47 @@
+﻿<Window x:ClassModifier="internal" x:Class="ZzukBot.UI.LoginWindow"
+        xmlns:ui="clr-namespace:ZzukBot.UI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:attachedProperties="clr-namespace:ZzukBot.WPF.AttachedProperties"
+        mc:Ignorable="d" x:Name="Window"
+        Title="{Binding Path=WindowTitle}" Width="350" Height="160"
+        MinHeight="{Binding ElementName=Window, Path=Height}" MaxHeight="{Binding ElementName=Window, Path=Height}"
+        ResizeMode="NoResize" attachedProperties:Result.DialogResult="{Binding Path=Result}"
+        IsEnabled="{Binding Path=IsEnabled}">
+    <Window.DataContext>
+        <ui:LoginViewModel />
+    </Window.DataContext>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" SharedSizeGroup="labelLength" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" SharedSizeGroup="labelLength" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" SharedSizeGroup="labelLength" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" SharedSizeGroup="labelLength" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Forum E-mail:" />
+        <TextBox Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"
+                 Text="{Binding Path=Email, Mode=Default, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Label Margin="0,0,10,0" Grid.Row="2" Grid.Column="0" Content="Forum Password:" />
+        <PasswordBox attachedProperties:Secure.Password="{Binding Path=Password, Mode=TwoWay}"
+                     VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1" />
+
+        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="0"
+                   Grid.ColumnSpan="2">
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="Remember Password:" />
+            <CheckBox VerticalAlignment="Center" IsChecked="{Binding Path=RememberPassword}" DockPanel.Dock="Left" />
+            <Button Command="{StaticResource ProcessAuthenticationCommand}" ClipToBounds="False" Height="25"
+                    Margin="20,0,20,0" VerticalAlignment="Stretch" DockPanel.Dock="Right" Content="Authenticate" />
+        </DockPanel>
+
+    </Grid>
+</Window>

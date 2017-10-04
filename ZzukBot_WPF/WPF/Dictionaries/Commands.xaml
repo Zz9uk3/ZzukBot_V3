@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <RoutedCommand x:Key="ProcessAuthenticationCommand" />
+    <RoutedCommand x:Key="ResetStatsCommand" />
+    <RoutedCommand x:Key="ResetChatLogCommand" />
+    <RoutedCommand x:Key="ResetLootLogCommand" />
+    <RoutedCommand x:Key="ResetInviteLogCommand" />
+    <RoutedCommand x:Key="ResetDebugLogCommand" />
+    <RoutedCommand x:Key="SaveSettingsCommand" />
+    <RoutedCommand x:Key="ReloadBotBasesCommand" />
+    <RoutedCommand x:Key="StartBotBaseCommand" />
+    <RoutedCommand x:Key="StopBotBaseCommand" />
+    <RoutedCommand x:Key="ShowBotBaseGuiCommand" />
+    <RoutedCommand x:Key="ReloadPluginsCommand" />
+    <RoutedCommand x:Key="ShowPluginGuiCommand" />
+    <RoutedCommand x:Key="PluginToggledCommand" />
+</ResourceDictionary>

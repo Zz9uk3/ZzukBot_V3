@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:ZzukBot.WPF.Converters"
+                    xmlns:ui="clr-namespace:ZzukBot.UI">
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Width">
+            <Setter.Value>
+                <MultiBinding Converter="{StaticResource TabSizeConverter}">
+                    <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=TabControl}" Path="" />
+                    <Binding RelativeSource="{RelativeSource AncestorType=TabControl, Mode=FindAncestor}"
+                             Path="ActualWidth" />
+                </MultiBinding>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <SolidColorBrush x:Key="YellBrush" Color="#FF3F40" />
+    <SolidColorBrush x:Key="GuildBrush" Color="#40FB40" />
+    <SolidColorBrush x:Key="WhisperBrush" Color="#FF7EFF" />
+    <SolidColorBrush x:Key="PartyBrush" Color="#AAA7FF" />
+    <SolidColorBrush x:Key="RaidBrush" Color="#FF7D00" />
+    <SolidColorBrush x:Key="ChannelBrush" Color="#FFBDC0" />
+
+    <Style TargetType="Button">
+        <Setter Property="Width" Value="130" />
+        <Setter Property="Height" Value="25" />
+    </Style>
+</ResourceDictionary>

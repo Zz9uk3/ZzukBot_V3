@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ZzukBot.WPF.Dictionaries"
+                    xmlns:converters="clr-namespace:ZzukBot.WPF.Converters">
+    <converters:TabSizeConverter x:Key="TabSizeConverter" />
+    <converters:ChannelConverter x:Key="ChannelConverter" />
+    <converters:WidthAdjustConverter x:Key="WidthAdjustConverter" />
+    <converters:CopperConverter x:Key="CopperConverter" />
+    <converters:BoolInverterConverter x:Key="BoolInverterConverter" />
+</ResourceDictionary>
