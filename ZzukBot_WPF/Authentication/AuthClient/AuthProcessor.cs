@@ -132,7 +132,7 @@ namespace ZzukBot.Authentication.AuthClient
                 //}
 
 #if DEBUG
-                AuthClientHandler.Instance.Write(_md5String, "TEST2".ToByte());
+                AuthClientHandler.Instance.Write(_md5String, "OpenSource".ToByte());
 #else
                 AuthClientHandler.Instance.Write(_md5String, App.GetMd5AsBase64(Assembly.GetExecutingAssembly().Location).ToByte());
 #endif
