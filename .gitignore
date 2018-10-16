@@ -57,3 +57,7 @@ ZzukBot_2.VC.db
 .vs/ZzukBot_2/v15/Solution.VC.db-wal
 .vs/ZzukBot_2/v15/Solution.VC.db-shm
 .vs/ZzukBot_2/v15/Browse.VC.opendb
+.vs/ZzukBot_2/v15/Server/sqlite3/storage.ide-wal
+.vs/ZzukBot_2/v15/Server/sqlite3/storage.ide-shm
+.vs/ZzukBot_2/v15/Server/sqlite3/storage.ide
+.vs/ZzukBot_2/v15/Server/sqlite3/db.lock
