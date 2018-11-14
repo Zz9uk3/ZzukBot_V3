@@ -75,7 +75,6 @@ namespace ZzukBot.ExtensionFramework
                         $"Name of Botbases must be unique however there are two or more bases with name {x.Name}");
                 tmpList.Add(name);
             }
-            Memory.HideAdditionalModules();
         }
     }
 }

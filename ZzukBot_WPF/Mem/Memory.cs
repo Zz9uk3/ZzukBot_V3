@@ -114,13 +114,6 @@ namespace ZzukBot.Mem
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         private delegate void NoParamFunc();
 
-
-        [DllImport("AntiQuery.dll")]
-        internal static extern int SetupHideModules(IntPtr processId);
-
-        [DllImport("AntiQuery.dll")]
-        internal static extern int HideAdditionalModules();
-
         /// <summary>
         ///     Initialise InternalMemoryReader
         /// </summary>
@@ -193,8 +186,6 @@ namespace ZzukBot.Mem
 
             //ErasePeHeader("Loader.dll");
             //UnlinkFromPeb("Loader.dll");
-
-            SetupHideModules((IntPtr) Process.GetCurrentProcess().Id);
 
             Hacks.Instance.AntiCtmStutter = true;
             Applied = true;

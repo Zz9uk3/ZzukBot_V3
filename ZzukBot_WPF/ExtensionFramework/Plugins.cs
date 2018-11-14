@@ -77,7 +77,6 @@ namespace ZzukBot.ExtensionFramework
                         $"Name of Plugins must be unique however there are two or more plugins with name {x.Name}");
                 tmpList.Add(name);
             }
-            Memory.HideAdditionalModules();
         }
     }
 }

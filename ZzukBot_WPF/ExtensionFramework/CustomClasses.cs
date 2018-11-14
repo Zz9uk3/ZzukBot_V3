@@ -91,7 +91,6 @@ namespace ZzukBot.ExtensionFramework
                         $"Name of CustomClasses must be unique however there are two or more bases with name {x.Name}");
                 tmpList.Add(name);
             }
-            Memory.HideAdditionalModules();
         }
 
         /// <summary>
