@@ -27,4 +27,6 @@
  - You should be fine to compile ZzukBot.exe and launch it
  - Select the 1.12.1 WoW.exe on the first launch and wait for WoW to open and the login GUI to spawn
  - Incase you build as debug you should be able to attach to the WoW process
+ 
+20c7be47-df21-4095-ba15-40c964de4569
 
